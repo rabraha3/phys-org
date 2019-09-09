@@ -50,6 +50,12 @@ def get_many_urls(base_url: str, num_pages = 10, delay = 0.1) -> List[str]:
         Number of pages we want to crawl through (must be greater than 1)
     delay : float
         Length of time between requests (in seconds). Set so we do not overload their servers.
+    
+    Example
+    ------
+    We want to get all article links in the first 10 pages of the mobile site.
+        >>> base_url = 'https://m.phys.org'
+        >>> urls = get_many_urls(base_url)
     """
     n_requests = num_pages
     if (num_pages < 1):
